@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  whale_id: 1
+  chatroom_id: 1
+
+two:
+  whale_id: 1
+  chatroom_id: 1
