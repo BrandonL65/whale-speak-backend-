@@ -9,7 +9,8 @@ class WhalesController < ApplicationController
         render json: @found 
     end 
     def create 
-        @new = Whale.new(name: params[:name], weight: params[:weight])
+        pass = BCrypt::Password.create(params[:password])
+        @new = Whale.new(name: params[:name], weight: params[:weight], password_digest: pass)
         @new.save 
     end 
 
