@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_140928) do
   create_table "messages", force: :cascade do |t|
     t.integer "whale_id"
     t.integer "chatroom_id"
+    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_140928) do
   create_table "whales", force: :cascade do |t|
     t.string "name"
     t.integer "weight"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
