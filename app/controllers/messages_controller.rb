@@ -1,21 +1,24 @@
 class MessagesController < ApplicationController
 
   def index
-      @all = Message.all 
+      @all = Message.all
       render json: @all
   end
-  
-  def delete 
+
+  def delete
     @found = Message.find(params[:id])
-    @found.destroy 
+    @found.destroy
 
     render json: Message.all
-  end 
+  end
 
-  def create 
+  def create
     @new = Message.new(content: params[:content], whale_id: params[:whale_id], chatroom_id: params[:chatroom_id])
     @new.save
 
-    render json: @new 
-  end 
+    render json: @new
+  end
 end
+
+# adding this for test 
+# test test
