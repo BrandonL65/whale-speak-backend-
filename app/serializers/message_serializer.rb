@@ -1,5 +1,6 @@
 class MessageSerializer < ActiveModel::Serializer
-  belongs_to :whale, foreign_key: :whale_id
-  belongs_to :chatroom, foreign_key: :chatroom_id
-  attributes :id, :content
+  belongs_to :whale, foreign_key: :whale_id 
+  belongs_to :chatroom, foreign_key: :chatroom_id 
+  attributes :id, :content 
+
 end
